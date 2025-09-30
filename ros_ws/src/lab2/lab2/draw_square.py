@@ -63,7 +63,7 @@ class DrawSquare(Node):
         
         else:
             # Call publisher here
-            publisher_.publish(self.forward_msg)
+            self.publisher_.publish(self.forward_msg)
             self.get_logger().info('Robot is Moving Forward!')
        
         # Get logger function call similar to 'cout' in C++
