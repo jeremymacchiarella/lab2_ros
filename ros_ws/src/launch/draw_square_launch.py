@@ -12,7 +12,7 @@ def generate_launch_description():
         # Fill in the strings here so that the correct
         # nodes are launched
         Node(
-            package='',
-            executable='',
+            package='lab2',
+            executable='draw_square',
         ),
     ])
