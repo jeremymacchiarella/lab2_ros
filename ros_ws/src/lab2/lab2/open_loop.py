@@ -7,7 +7,7 @@ from rclpy.node import Node
     draw a square on the screen. Below I have commented parts of the code that
     you need to fill in to make the logic complete.
 '''
-# TEST TEST TEST TEST TEST Test
+# TEST TEST TEST TEST TEST
 # We have to use the geometry_msgs/msg/Twist to control robots
 # Write in here what the correct import should be
 from geometry_msgs.msg import Twist
