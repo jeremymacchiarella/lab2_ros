@@ -72,7 +72,7 @@ class DrawSquare(Node):
         elif (self.state == 2):
             self.publisher_.publish(self.turn_msg)
             self.get_logger().info('robot is turning')
-            self.state = 2
+            self.state = 3
         elif (self.state == 3):
             pass 
 
