@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'draw_square = lab2.draw_square:main',
             'draw_spiral = lab2.draw_spiral:main',
+            'open_loop = lab2.open_loop:main',
         ],
     },
 )
