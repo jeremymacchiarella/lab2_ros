@@ -48,7 +48,7 @@ class DrawSquare(Node):
 
 
 
-        self.vert_msg.linear.y = -1.0
+        self.vert_msg.linear.y = 1.0
         self.horiz_msg.linear.x = 1.0
         self.turn_msg.angular.z = 1.57*2
 

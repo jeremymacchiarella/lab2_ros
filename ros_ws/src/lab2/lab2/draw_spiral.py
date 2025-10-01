@@ -45,7 +45,7 @@ class DrawSquare(Node):
         self.spiral_msg = Twist()
 
         self.spiral_msg.linear.x = 1.0
-        self.spiral_msg.angular.z = 0.1
+        self.spiral_msg.angular.z = 3.0
 
 
     # Callback for the events
@@ -54,7 +54,12 @@ class DrawSquare(Node):
         
         # Call publisher here
         self.publisher_.publish(self.spiral_msg)
-        self.spiral_msg.angular.z += 0.1
+
+        if (self.spiral_msg.angular.z > 0):
+            self.spiral_msg.angular.z -= 0.25
+
+        if (self.spiral_msg.angular.z < 0):
+            self.spiral_msg.angular.z = 0.0
         self.get_logger().info('Robot is Drawing a Spiral!')
             
        
