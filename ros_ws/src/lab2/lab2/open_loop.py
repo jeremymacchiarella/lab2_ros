@@ -48,9 +48,9 @@ class DrawSquare(Node):
 
 
 
-        self.vert_msg.linear.x = 1.0
-        self.horiz_msg.linear.y = 1.0
-        self.turn_msg.angular.z = 1.57
+        self.vert_msg.linear.y = -1.0
+        self.horiz_msg.linear.x = 1.0
+        self.turn_msg.angular.z = 1.57*2
 
         self.state = 0
 
@@ -66,13 +66,13 @@ class DrawSquare(Node):
             self.get_logger().info('robot is moving right')
             self.state = 1
         elif (self.state == 1):
+            self.publisher_.publish(self.vert_msg)
+            self.get_logger().info('robot is moving down')
+            self.state = 2
+        elif (self.state == 2):
             self.publisher_.publish(self.turn_msg)
             self.get_logger().info('robot is turning')
             self.state = 2
-        elif (self.state == 2):
-            self.publisher_.publish(self.vert_msg)
-            self.get_logger().info('robot is moving down')
-            self.state = 3
         elif (self.state == 3):
             pass 
 
