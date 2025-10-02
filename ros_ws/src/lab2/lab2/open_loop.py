@@ -28,20 +28,7 @@ class DrawSquare(Node):
         timer_period = 1.0  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
-        # Think of this flag as a FSM, 
-        # or that the turtle has two modes of operation.
-        # The robot is either turning in place, or not turning in place
-        # i.e. moving forward.
         
-
-        # Let's create two messages to send to the robot depending
-        # on the mode its in.
-        # What should their type be (should the same as 'Import' above)
-
-        # If I want the robot to move "1m forward" what should
-        # the speed be, given the timer is running at 1hz?
-        # (Note that values are in m/s)
-        # Along which axis should I move in?
         self.vert_msg = Twist()
         self.horiz_msg = Twist()
         self.turn_msg = Twist()
