@@ -13,6 +13,6 @@ def generate_launch_description():
         # nodes are launched
         Node(
             package='lab2',
-            executable='open loop',
+            executable='open_loop',
         ),
     ])
